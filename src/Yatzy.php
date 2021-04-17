@@ -52,16 +52,12 @@ class Yatzy
     public static function twos($d1, $d2, $d3, $d4, $d5)
     {
         $sum = 0;
-        if ($d1 == 2)
-            $sum += 2;
-        if ($d2 == 2)
-            $sum += 2;
-        if ($d3 == 2)
-            $sum += 2;
-        if ($d4 == 2)
-            $sum += 2;
-        if ($d5 == 2)
-            $sum += 2;
+        $dados = [$d1, $d2, $d3, $d4, $d5];
+
+        foreach ($dados as $dado) {
+            if ($dado == 2)
+                $sum += 2;
+        }
 
         return $sum;
     }
