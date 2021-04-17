@@ -102,9 +102,12 @@ class Yatzy
     public function sixes()
     {
         $sum = 0;
-        for ($at = 0; $at < 5; $at++)
-            if ($this->dice[$at] == 6)
-                $sum = $sum + 6;
+
+        foreach ($this->dice as $dado) {
+            if($dado == 6)
+                $sum += 6;
+        }
+        
         return $sum;
     }
 
