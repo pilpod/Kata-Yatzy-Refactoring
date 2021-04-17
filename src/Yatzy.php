@@ -78,11 +78,12 @@ class Yatzy
     public function fours()
     {
         $sum = 0;
-        for ($at = 0; $at != 5; $at++) {
-            if ($this->dice[$at] == 4) {
+
+        foreach ($this->dice as $dado) {
+            if($dado == 4)
                 $sum += 4;
-            }
         }
+        
         return $sum;
     }
 
