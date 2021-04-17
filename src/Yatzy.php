@@ -83,18 +83,20 @@ class Yatzy
             if($dado == 4)
                 $sum += 4;
         }
-        
+
         return $sum;
     }
 
     public function Fives()
     {
-        $s = 0;
-        $i = 0;
-        for ($i = 0; $i < 5; $i++)
-            if ($this->dice[$i] == 5)
-                $s = $s + 5;
-        return $s;
+        $sum = 0;
+
+        foreach ($this->dice as $dado) {
+            if($dado == 5)
+                $sum += 5;
+        }
+        
+        return $sum;
     }
 
     public function sixes()
